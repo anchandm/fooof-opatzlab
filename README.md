@@ -4,6 +4,8 @@ this very simple script takes in a series of power spectra and fooofs them, acco
 
 it takes matlab files in, and spits matlab files out
 
+lab_main_script is a ready-to-go script, which you can modify locally and use for whatever you want. as it is, it runs with some test-data that comes from my folder.
+
 to run it, make sure to have installed anaconda -> https://conda.io/docs/index.html
 the inpout files are:
 	- a .mat file containing your power spectra, in which rows represent different observations (es. a 10*200 matrix, 
