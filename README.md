@@ -1,6 +1,7 @@
 # fooof-opatzlab
 
 this very simple script takes in a series of power spectra and fooofs them, according to https://github.com/voytekresearch/fooof
+
 it takes matlab files in, and spits matlab files out
 
 to run it, make sure to have installed anaconda -> https://conda.io/docs/index.html
@@ -20,3 +21,6 @@ parameters you can control (with self-explanatory names) are:
 	- the maximum number of peaks (max_n_peaks)
 
 In case you want to plot your results, set plot to 1. Be aware that it will plot one figure for every power spectrum that you feed him.
+
+This is the preprint of reference (a good one!): https://www.biorxiv.org/content/biorxiv/early/2018/04/11/299859.full.pdf
+And here is again the repository from which I have taken the code: https://github.com/voytekresearch/fooof
