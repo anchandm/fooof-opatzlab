@@ -22,7 +22,7 @@ the output file is a .mat file in which:
 
 	- the third column is the width of the peak (not 100% sure about this)
 
-parameters you can control (with self-explanatory names) are:
+parameters you can control are:
 
 	- the frequency range that you want to analyze (freq_range) in Hz
 
