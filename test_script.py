@@ -6,7 +6,7 @@ Created on Mon Apr 16 10:18:50 2018
 """
 
 import scipy.io as scio
-from fooof import FOOOF, FOOOFGroup
+from fooof import FOOOF
 import numpy as np
 import matplotlib.pyplot as plt
 
