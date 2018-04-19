@@ -17,7 +17,8 @@ name_file_spectra = "spectra" # the name of your .mat file with the power spectr
 name_matlab_variable_spectra = 'Spectrumpost' # the name of the 
 name_file_freqs = "freqs"
 name_matlab_variable_freqs = 'freqs'
-name_file_to_be_saved = 'demo_results'
+name_file_to_be_saved_peaks = 'demo_results_peaks'
+name_file_to_be_saved_background = 'demo_results_background'
 
 
 spectra = scio.loadmat(path_load + name_file_spectra)[name_matlab_variable_spectra]
@@ -32,6 +33,7 @@ plot = 0
 
 
 peaks_params = np.zeros((np.shape(spectra)[0], max_n_peaks, 3))
+background_params = np.zeros((np.shape(spectra)[0], 2))
 
 for spectra_idx in np.arange(0, np.shape(spectra)[0]):
     fm = FOOOF(max_n_peaks=max_n_peaks, peak_width_limits=peak_width_limits)
@@ -42,6 +44,10 @@ for spectra_idx in np.arange(0, np.shape(spectra)[0]):
            
     peaks_param = fm.peak_params_
     peaks_params[spectra_idx, 0 : np.shape(peaks_param)[0], 0 : np.shape(peaks_param)[1]] = peaks_param
+    background_params[spectra_idx, :] = fm.background_params_
 
-results = dict([(name_file_to_be_saved, peaks_params)])
-scio.savemat(path_save + name_file_to_be_saved, results)
+results_peaks = dict([(name_file_to_be_saved_peaks, peaks_params)])
+results_background = dict([(name_file_to_be_saved_background, background_params)])
+
+scio.savemat(path_save + name_file_to_be_saved_peaks, results_peaks)
+scio.savemat(path_save + name_file_to_be_saved_background, results_background)
