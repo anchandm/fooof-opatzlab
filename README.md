@@ -14,13 +14,21 @@ the inpout files are:
 
 	- a.mat file containing the frequencies that correspond to the power spectrum (a 1x200 matrix, in the previous example)
 
-the output file is a .mat file in which:
+the output file are two .mat files in which:
 
-	- the first column corresponds to the frequency of the identified peak in the power spectrum
+	- one gives you information about the oscillatory peaks:
 
-	- the second column corresponds to the amplitude of the peak
+		- the first column corresponds to the frequency of the identified peak in the power spectrum
 
-	- the third column is the width of the peak (not 100% sure about this)
+		- the second column corresponds to the amplitude of the peak
+
+		- the third column is the width of the peak (not 100% sure about this)
+	
+	- the second one gives you information on the aperiodic part of your signal:
+
+		- the first column is the offset of the 1/f fit
+
+		- the second column is the slope of the 1/f fit
 
 parameters you can control are:
 
